@@ -53,9 +53,8 @@ const display = (jsonData, value) => {
         } 
     }
 }
-document.getElementById("buy").addEventListener("click", () => {
+document.querySelector(".buy").addEventListener("click", () => {
     console.log("Button clicked");
-
     let cart = document.querySelector(".page");
     console.log("Cart:", cart); 
     for (let i = 0; i < 20; i++) {
@@ -64,9 +63,13 @@ document.getElementById("buy").addEventListener("click", () => {
             console.log("Item added:", jsonData[i]); 
             let div = document.createElement('div');
             div.classList.add('car');
-            
+            cart.appendChild(div);
         }
     }
 });
 
 
+const button = document.querySelector(".buy");
+    button.addEventListener('click', function() {
+    window.location.href = 'www.google.com';
+});
